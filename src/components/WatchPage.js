@@ -8,9 +8,11 @@ const WatchPage = () => {
     const [searchParams] = useSearchParams();
     console.log(searchParams.get("v"));
     const dispatch = useDispatch();
-    useEffect(()=>{
+
+    useEffect(()=>{  //as useEffect is called first so we are dispatching an action in it which will result in the state to be false everytime when we are moving to /watch page and hece the sidebar panel will be hidden everytime
      dispatch(closeMenu())
     },[])
+
     return (
         <div className='px-5'>
             <iframe width="800" height="400" src={"https://www.youtube.com/embed/"+searchParams.get("v")} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>

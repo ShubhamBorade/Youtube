@@ -10,7 +10,7 @@ const appSlice = createSlice({
           state.isMenuOpen = ! state.isMenuOpen;
         },
         closeMenu:(state)=>{
-            state.isMenuOpen = false;
+            state.isMenuOpen = false;  // here we are setting value as hardcoded false because 
         }
     }
 })
