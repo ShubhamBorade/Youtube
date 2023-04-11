@@ -11,28 +11,28 @@ const SideBar = () => {
     return (   
         <div className='shadow-xl w-44 p-2'>
            <ul className='mt-1'>
-           <li>
+           <li className='hover:bg-gray-100  cursor-pointer'>
            <Link to="/">Home</Link>
            </li> 
-            <li className='my-2'>Music</li>
-            <li className='my-2'>Shorts</li>
-            <li className='my-2'>Subscriptions</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Music</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Shorts</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Subscriptions</li>
           </ul>
         <hr className='mt-2'/>
           <h1 className='font-bold mt-5'>Subscriptions</h1>
           <ul className='mt-1'>
-            <li className='my-2'>Music</li>
-            <li className='my-2'>Gaming</li>
-            <li className='my-2'>Movies</li>
-            <li className='my-2'>Sports</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Music</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Gaming</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Movies</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Sports</li>
           </ul>
           <hr className='mt-2'/>
           <h1 className='font-bold mt-4'>Watch Later</h1>
           <ul className='mt-1'>
-            <li className='my-2'>Music</li>
-            <li className='my-2'>Gaming</li>
-            <li className='my-2'>Movies</li>
-            <li className='my-2'>Sports</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Music</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Gaming</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Movies</li>
+            <li className='my-2 hover:bg-gray-100  cursor-pointer'>Sports</li>
           </ul>
         </div>
     )
