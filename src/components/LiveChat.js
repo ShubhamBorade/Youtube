@@ -8,6 +8,7 @@ const LiveChat = () => {
 
     const [liveMessage,setLiveMessage] = useState("");
 
+    //reading the store
     const chatMessages = useSelector(store=>store.chat.messages)
 
     const dispatch = useDispatch()
@@ -22,14 +23,14 @@ const LiveChat = () => {
         }))
         }, 800);
 
-      return () => clearInterval(i);
+      return () => clearInterval(i); //it will clear the setinterval function
   
     },[])
 
 
     return (
          <div>
-          <div className='border-2 boder-black h-[400px] w-[400px] bg-slate-100 rounded overscroll-contain overflow-y-scroll flex flex-col-reverse'>          
+          <div className='border-2 boder-black h-[400px] w-[400px] bg-slate-100 rounded  overflow-y-scroll flex flex-col-reverse'>          
               {chatMessages.map((c,index)=><ChatMessage key={index} name={c.name} message={c.message}/>)}
           </div>
 
@@ -40,7 +41,7 @@ const LiveChat = () => {
               message:liveMessage + "🌈",
             }))
 
-            setLiveMessage("");
+            setLiveMessage(""); //it will clear the message from inputbox once we hit the enter
           }}>
             <input 
             value={liveMessage}

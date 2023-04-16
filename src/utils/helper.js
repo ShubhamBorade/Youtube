@@ -46,4 +46,6 @@ export function makeRandomMessage(length) {
     return result;
 }
 
+//Note:- we need to pass length while calling makeRandomMessage function
+//length is the length of message we want to generate
 // console.log(makeRandomMessage(10));
