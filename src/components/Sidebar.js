@@ -8,8 +8,9 @@ const SideBar = () => {
 
     if(!isMenuOpen) return null; // return null when user clicks on thumbnail button(so that the sidebar gets hidden)
                                  // either above if will retun or below return
-    return (   
-        <div className='shadow-xl w-44 p-2'>
+    return (  
+       <div className='relative'>
+        <div className='shadow-xl w-44 p-2 fixed top-[48px] bg-gray-50 z-9 h-[600px]'>
            <ul className='mt-1'>
            <li className='hover:bg-gray-100  cursor-pointer'>
            <Link to="/">Home</Link>
@@ -35,6 +36,7 @@ const SideBar = () => {
             <li className='my-2 hover:bg-gray-100  cursor-pointer'>Sports</li>
           </ul>
         </div>
+        </div> 
     )
 }
 
