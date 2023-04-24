@@ -35,8 +35,8 @@ const Head = () => {
         dispatch(toggleMenu());
     }
     return (
-         <div className='relative z-10 '>
-        <div className='grid grid-cols-4 p-2    fixed w-[1265px] z-10 bg-gray-50'>
+         <div className='relative z-10'>
+        <div className='grid grid-cols-4 p-2    fixed w-[1265px] z-10 bg-gray-50 shadow-md'>
            <div className='flex col-span-1  mt-1'>
               <img className='h-5 cursor-pointer' 
               onClick={()=>toggleMenuHandler()} 
@@ -54,9 +54,9 @@ const Head = () => {
              <button className='border border-gray-400 px-2 bg-gray-100 rounded-r-full p-1 hover:bg-gray-200'>Search</button>
            </div>
 
-           {showSuggestions && <div className='fixed ml-[325px] mt-[40px] w-[407px] bg-gray-50 rounded shadow-lg border border-gray-100 z-30'>
-                <ul >
-                 { showSuggestions && suggestions.map((s)=> <li key={s} className='pl-3 py-1 hover:bg-gray-200 cursor-pointer'>{s}</li>)}
+           {showSuggestions && <div className='fixed ml-[325px] mt-[35px] w-[407px] bg-gray-50 rounded shadow-lg border border-gray-100  '>
+                <ul>
+                 { showSuggestions && suggestions.map((s)=> <li key={s} className='pl-3 py-1 hover:bg-gray-200 cursor-pointer'>{s}</li>)} 
                 </ul>
             </div>}
            

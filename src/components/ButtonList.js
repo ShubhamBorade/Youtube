@@ -7,7 +7,7 @@ const ButtonList = () => {
     const isMenuOpen = useSelector(store=>store.app.isMenuOpen);
 
     return (
-        <div className={'flex  mt-[48px] fixed left-30 z-10 bg-gray-50 '+ (isMenuOpen && 'ml-[180px]') + ' w-[1265px]'}>
+        <div className={'flex  mt-[48px] fixed left-30 bg-gray-50 pt-[15px] '+ (isMenuOpen && 'ml-[187px]') + ' w-[1265px]'}>
             <Button name="Live"/>
             <Button name="Gaming"/>
             <Button name="Movies"/>

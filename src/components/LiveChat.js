@@ -14,12 +14,12 @@ const LiveChat = () => {
     const dispatch = useDispatch()
     useEffect(()=>{
 
-      // API Polling (fetching the data from store after every 2000ms)
+      // API Polling (fetching the data from store after every 800ms)
         const i = setInterval(() => {
             console.log("API polling");
             dispatch(addMessage({
                 name:generateRandomName(),
-                message:makeRandomMessage(20) + "🔥",
+                message:makeRandomMessage(20) + "🔥", // length of the msg will be 20 characters
         }))
         }, 800);
 
@@ -35,7 +35,7 @@ const LiveChat = () => {
           </div>
 
           <form className='w-[400px] ml-1 ' onSubmit={(e)=>{
-            e.preventDefault();
+            e.preventDefault();                                  //preventdefault will avoid our page form refreshing when we hit enter button after entering the message
             dispatch(addMessage({
               name:"Shubham",
               message:liveMessage + "🌈",
@@ -43,11 +43,13 @@ const LiveChat = () => {
 
             setLiveMessage(""); //it will clear the message from inputbox once we hit the enter
           }}>
-            <input 
-            value={liveMessage}
-            onChange={(e)=> setLiveMessage(e.target.value) }
-            className='w-[323px] h-8 bg-slate-200 px-2 rounded border border-black boder-2 outline-none' type="text" placeholder='Type here.....'/>
-            <button className='bg-blue-100 hover:bg-blue-200 px-4 py-1 rounded font-bold ml-1'>Send</button>
+            <div className='bg-slate-200 -ml[3px] h-[35px]'>
+              <input 
+              value={liveMessage}
+              onChange={(e)=> setLiveMessage(e.target.value) }
+              className='w-[323px] h-8 bg-slate-200 px-2 rounded border border-black boder-2 outline-none' type="text" placeholder='Type here.....'/>
+              <button className='bg-blue-300 hover:bg-blue-200 px-4 py-1 rounded font-bold ml-1'>Send</button>
+              </div>
           </form>
         </div>
     )

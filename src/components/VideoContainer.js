@@ -3,6 +3,7 @@ import { YOUTUBE_VIDEO_API } from '../utils/constants';
 import VideoCard from './VideoCard';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Shimmer from './Shimmer';
 
 
 const VideoContainer = () => {
@@ -22,10 +23,11 @@ const VideoContainer = () => {
    }
    const isMenuOpen = useSelector(store=>store.app.isMenuOpen);
 
-    return (
-        <div className={"  flex flex-wrap relative z-0 mt-[90px] " + (isMenuOpen && "ml-[180px]")}>
+
+    return videos.length === 0 ? <Shimmer/> :(
+        <div className={"  flex flex-wrap mt-[100px] " + (isMenuOpen && "ml-[180px]")}>
        {videos.map((video)=> 
-         <Link to={"/watch?v=" + video.id} >
+         <Link className='relative ' to={"/watch?v=" + video.id} >
             <VideoCard key={video.id} info={video}/>
           </Link>
           )} 
